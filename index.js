@@ -43,16 +43,16 @@ app.get('/delete/:id', function (req, res) {
 
 app.get('/edit/:id', function (req, res) {
     const id = req.params.id;
-    var Singer1 = arrSinger.filter(x => x.id == id);
-    res.render('edit.ejs', { Singer1 });
+    var g = new Singer();
+    g = arrSinger.filter(x => x.id == id);
+    res.render('edit.ejs', { g  });
+
     //res.send({Singer1});
-    //console.log(Singer1.length);
 })
 
 app.listen(port, function () {
     console.log('running server ' + port);
 })
 
-var Singer1 = arrSinger.filter(x => x.id == 2);
-    //console.log(Singer1);
-//hieu hieu hieu
+// var Singer1 = arrSinger.filter(x => x.id == 2);
+// console.log(Singer1);

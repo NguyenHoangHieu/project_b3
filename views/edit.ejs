@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
-<body>wdwd
-    <%= Singer1.id  %>
-        <label for="1"><%- Singer1.name %></label>
-    
+<body>
+    <label for="1">heiu = <%= g.name %></label>
     <div class="container">
         <div class="col-md-7">
             <h1>Form chinh sua thong tin ca si</h1>
-            <form role="form" method="POST" action="/add-singer">
+            <form role="form" method="POST" action="/edit-singer">
                 <div class="form-group">
                     <label for="1">Nhap ten ca si</label>
                     <input type="text" class="form-control" name="txtName" id="1" placeholder="Nhap ten ca si">
