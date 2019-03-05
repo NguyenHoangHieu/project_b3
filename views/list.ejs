@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1>Danh sach ca si</h1>
+    <div><a href="/add" class="btn btn-primary">Add New</a></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td class="active">id </td>
+                <td class="active">name</td>
+                <td class="active">avata</td>
+                <td class="active">link</td>
+                <td class="active">panal</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% arrSinger.forEach(Singer => { %>
+            <tr>
+                <td><%= Singer.id %></td>
+                <td><%= Singer.name %></td>
+                <td><img src="<%= Singer.avata %>"> <%= Singer.avata %></td>
+                <td><a target="_blank" href="<%= Singer.link %>"><%= Singer.link %></a></td>
+                <td>
+                    <a href="/edit/<%= Singer.id %>" class="btn btn-default">Update</a>
+                    <a href="/delete/<%= Singer.id %>" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            %> <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>
