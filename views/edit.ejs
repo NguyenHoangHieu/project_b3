@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="wplaceholderth=device-wplaceholderth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Them moi ca si</title>
+    <title>trang edit ca si</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
@@ -13,8 +13,9 @@
 
     <div class="container">
         <div class="col-md-7">
-            <h1>Form thêm mới một ca sĩ</h1>
-            <form role="form" method="POST" action="/singer/add-singer">
+            <h1>Form chỉnh sửa thông tin ca sĩ</h1>
+            <form role="form" method="POST" action="/singer/edit-singer">
+                <input type="text" class="form-control" name="txtId" id="txtId" placeholder="Nhap KD">
                 <div class="form-group">
                     <label for="txtName">Nhập tên ca sĩ</label>
                     <input type="text" class="form-control" name="txtName" id="txtName">
@@ -26,7 +27,7 @@
                 <div class="form-group">
                     <label for="txtLink">Nhập link liên kết</label>
                     <input type="text" class="form-control" name="txtLink" id="txtLink">
-                </div> <button type="submit" class="btn btn-success">Thêm mới</button>
+                </div> <button type="submit" class="btn btn-success">Cập nhật</button>
             </form>
         </div>
     </div>

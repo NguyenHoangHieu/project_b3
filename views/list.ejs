@@ -10,16 +10,16 @@
 </head>
 
 <body>
-    <h1>Danh sach ca si</h1>
-    <div><a href="/add" class="btn btn-primary">Add New</a></div>
+    <h1 class="text-center">Danh sác ca sĩ yêu thích</h1>
+    <div class="text-center"><a href="/singer/add" class="btn btn-primary">Thêm mới</a></div></br>
     <table class="table">
         <thead>
             <tr>
-                <td class="active">id </td>
-                <td class="active">name</td>
-                <td class="active">avata</td>
-                <td class="active">link</td>
-                <td class="active">panal</td>
+                <td class="active">Id</td>
+                <td class="active">Tên ca sĩ</td>
+                <td class="active">Ảnh đại diện</td>
+                <td class="active">Link liên kết</td>
+                <td class="active">Điều khiển</td>
             </tr>
         </thead>
         <tbody>
@@ -30,13 +30,12 @@
                 <td><img src="<%= Singer.avata %>"> <%= Singer.avata %></td>
                 <td><a target="_blank" href="<%= Singer.link %>"><%= Singer.link %></a></td>
                 <td>
-                    <a href="" class="btn btn-default">Update</a>
-                    <a href="/delete/<%= Singer.id %>" class="btn btn-danger">Delete</a>
+                    <a href="/singer/edit/<%= Singer.id %>" class="btn btn-default">Cập nhật</a>
+                    <a href="/singer/delete/<%= Singer.id %>" class="btn btn-danger">Xóa</a>
                 </td>
             </tr>
             %> <% }); %>
         </tbody>
     </table>
 </body>
-
 </html>
